@@ -1,0 +1,155 @@
+/* Setup */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ^^^ Setup ^^^ */
+
+/* vvvv Home Page vvvv */
+
+#home_page {
+  background-color: #91D8E4;
+  min-height: 100vh;
+}
+.title-container {
+  margin-bottom: 5%;
+}
+
+.name {
+  font-size: 4rem;
+  font-style: bold;
+  margin-top: 5%;
+  text-align: center;
+  color: #0D4C92;
+}
+
+
+.subtitle {
+  color: #CFF5E7;
+  font-style: regular;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 5%;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  margin-top: 0;
+}
+
+#lives {
+    margin-top: 3%;
+    text-align: center;
+}
+
+
+/* ^^^ Home Page ^^^ */
+
+
+/* ============================ */
+
+.footer-link {
+  height: 4rem;
+  margin: 2.5rem;
+}
+
+.bottom-cont {
+  text-align: center;
+  min-height: auto;
+}
+
+#form {
+  width: 100%;
+}
+
+.guess {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 1.5rem;
+  padding-top: 2%;
+  text-align: right;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 1px;
+  box-sizing: border-box;
+  border-style: none none solid none;
+  border-color: black;
+  background-color: #91D8E4;
+}
+
+.submit-button {
+  display: flex;
+  background-color: #82AAE3;
+  border: none;
+  border-radius: 12px;
+  color: #FFF5E1;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  margin: 1rem 2rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #BFEAF5;
+  color: #0D4C92;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transition: transform .2s;
+  transform: scale(1.1);
+}
+
+.submit-button:not(:hover) {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1); /* Safari 3-8 */
+  transition: transform .3s;
+  transform: scale(1);
+}
+
+#commentary {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5%;
+  text-align:center;
+}
+/* ============================ */
+/* ^^^^ Contact Me ^^^^ */
+
+/* vvvv footer vvvv */
+/* ============================ */
+
+#bottom-container {
+  text-align: center;
+}
+
+#end-logos {
+  padding-top: 2%;
+}
+
+.image {
+  display: block;
+  height: 4rem;
+  padding: 5%;
+}
+
+/* ============================ */
+/* ^^^^ footer ^^^^ */
