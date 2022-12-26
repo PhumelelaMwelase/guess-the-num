@@ -32,18 +32,20 @@
       </h2>
         <h3 id="lives">{{ "❣️️" * num_lives }}</h3>
       </div>
+      <div class="container-fluid">
       <form id="form" action="/" method="post">
         <group class="row">
-          <p class="mx-auto col-lg-3 guess">Guess:</p>
-          <article class="mx-auto col-lg-3">
+          <p class="mx-auto col-3 guess">Guess:</p>
+          <article class="mx-auto col-3">
 
             <input type="number" min="1" max="100" placeholder="Enter Number:*" required name="number" autofocus><br>
           </article>
-          <button class="submit-button mr-auto col-lg-3" type="submit" value="Submit">Enter</button>
+          <button class="submit-button mx-auto col-3" type="submit" value="Submit">Enter</button>
         </group>
 
 
       </form>
+        </div>
 
       <section id="commentary" class="mx-auto col-lg-6">
         <p>{{ comment }}</p>
@@ -58,30 +60,30 @@
     Created using:
 
     <section id="end-logos" class="mx-auto col-lg-3">
-      <div class="bottom-container">
+      <div class="container-fluid bottom-container">
         <div class="row">
-          <div class="col">
+          <div class="col-3">
             <div class="footer-container" id="html-hover">
                 <img src="static/images/html black-01.png" alt="html" class="image">
                 <div class="overlay">
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-3">
           <div class="footer-container" id="css-hover">
               <img src="static/images/css black-01.png" alt="css" class="image">
               <div class="overlay">
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-3">
         <div class="footer-container" id="bootstrap-hover">
           <img src="static/images/bootstrap black-01.png" alt="bootstrap" class="image">
           <div class="overlay">
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-3">
         <div class="footer-container" id="python-hover">
             <img src="static/images/python black-01.png" alt="python" class="image">
             <div class="overlay">
