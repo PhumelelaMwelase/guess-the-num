@@ -46,48 +46,50 @@
 
       </form>
         </div>
-
       <section id="commentary" class="mx-auto col-lg-6">
         <p>{{ comment }}</p>
       </section>
 
+
+      <section class="row mx-auto col-lg-6 wins">
+        {% if wins > 0 %}
+        <h4>Wins: {{ wins }}</h4>
+        {% endif %}
+        {% if highest > 0 %}
+          <h5>High-score: {{ highest }}</h5>
+        {% endif %}
+      </section>
+
+
     </div>
 
-  <section id="bottom-container" class="heading">
-    <article>© Phumelela Mwelase {{year}}</article>
+  <section id="bottom-container">
+    <article class="heading">© Phumelela Mwelase {{year}}</article>
 
 
     Created using:
 
-    <section id="end-logos" class="mx-auto col-lg-3">
+    <section id="end-logos" class="mx-auto col-3">
       <div class="container-fluid bottom-container">
         <div class="row">
-          <div class="col-3">
+          <div class="col">
             <div class="footer-container" id="html-hover">
                 <img src="static/images/html black-01.png" alt="html" class="image">
-                <div class="overlay">
-            </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col">
           <div class="footer-container" id="css-hover">
               <img src="static/images/css black-01.png" alt="css" class="image">
-              <div class="overlay">
-          </div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col">
         <div class="footer-container" id="bootstrap-hover">
           <img src="static/images/bootstrap black-01.png" alt="bootstrap" class="image">
-          <div class="overlay">
-          </div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col">
         <div class="footer-container" id="python-hover">
             <img src="static/images/python black-01.png" alt="python" class="image">
-            <div class="overlay">
-        </div>
       </div>
       </div>
       </div>

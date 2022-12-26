@@ -9,6 +9,10 @@ app = Flask(__name__)
 
 lives = 10
 
+wins = 0
+
+high_score = 0
+
 random_number = random.randint(1, 100)
 
 high_responses = ["While admirable, generosity isn't always warranted!", "Much too generous, much too generous!",
@@ -22,17 +26,20 @@ def home():
     # Footer #
     year = x.year
     answer = "Let's see how shrewd you are!"
-    return render_template("index.html", num_lives=lives, year=year, comment=answer)
+    return render_template("index.html", num_lives=lives, year=year, comment=answer, wins=wins, highest=high_score)
 
 
 @app.route("/", methods=["POST"])
 def receive_data():
-    global lives, random_number
+    global lives, random_number, wins, high_score
     guess = int(request.form["number"])
+    if wins > high_score:
+        high_score = wins
     while lives > 1:
         if guess == random_number:
-            answer = f"You Got It. The correct answer was {random_number}\nEnter a new number to keep playing."
-            lives = 10
+            answer = f"You Got It. The correct answer was {random_number}.\nEnter a new number to keep playing."
+            wins += 1
+            lives = 10 - wins
             random_number = random.randint(1, 100)
         elif guess < random_number:
             lives -= 1
@@ -41,12 +48,13 @@ def receive_data():
             lives -= 1
             answer = f"{random.choice(high_responses)} Go lower."
 
-        return render_template("index.html", num_lives=lives, comment=answer)
+        return render_template("index.html", num_lives=lives, comment=answer, wins=wins, highest=high_score)
     else:
-        answer = f"You lose! The correct answer was {random_number}\nEnter a new number to keep playing."
+        answer = f"You lose! The correct answer was {random_number}.\nEnter a new number to keep playing."
         lives = 10
         random_number = random.randint(1, 100)
-    return render_template("index.html", num_lives=lives, comment=answer)
+        wins = 0
+    return render_template("index.html", num_lives=lives, comment=answer, wins=wins, highest=high_score)
 
 
 

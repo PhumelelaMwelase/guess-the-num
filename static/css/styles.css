@@ -20,6 +20,13 @@ body {
   background-color: #91D8E4;
   min-height: 100vh;
 }
+
+@media only screen and (max-width: 600px) {
+  #home_page  {
+    background-color: purple;
+  }
+}
+
 .title-container {
   margin-bottom: 5%;
 }
@@ -130,6 +137,10 @@ input[type=number], select {
   font-weight: 600;
   padding: 5%;
   text-align:center;
+}
+
+.wins {
+    text-align: center;
 }
 /* ============================ */
 /* ^^^^ Contact Me ^^^^ */
